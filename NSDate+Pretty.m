@@ -27,6 +27,19 @@ static NSDateFormatter *formatter = nil;
     return exportDateString;
 }
 
+
+- (NSString *) typicalDate {
+    
+    if(!formatter){
+        formatter = [[NSDateFormatter alloc] init];
+    }
+    
+      [formatter setDateFormat:@"Y/M/d"];
+    NSString *dateFromDate = [formatter stringFromDate:self];
+    NSString *exportDateString = [NSString stringWithFormat:@"%@", dateFromDate ];
+    return exportDateString;
+}
+
 - (NSString *) dayAndTime{
     if(!formatter){
         formatter = [[NSDateFormatter alloc] init];
