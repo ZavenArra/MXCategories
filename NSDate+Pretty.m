@@ -34,7 +34,7 @@ static NSDateFormatter *formatter = nil;
         formatter = [[NSDateFormatter alloc] init];
     }
     
-      [formatter setDateFormat:@"Y/M/d"];
+    [formatter setDateFormat:@"Y/M/dd"];
     NSString *dateFromDate = [formatter stringFromDate:self];
     NSString *exportDateString = [NSString stringWithFormat:@"%@", dateFromDate ];
     return exportDateString;
